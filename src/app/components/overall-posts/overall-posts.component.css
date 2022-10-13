@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Nabla&family=Silkscreen&display=swap');
+
+* {
+    font-family: sans-serif;
+    
+}
+
+h1 {
+font-family: 'Nabla', cursive;
+font-size: 36px;
+margin-bottom: 10px;
+}
+
+.general {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container{
+    width: 450px;
+    height: 450px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: rgb(255, 131, 73);
+    overflow: hidden;
+}
+
+#container-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 450px;
+    height: 450px;
+
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+/* width */
+#container-content::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  #container-content::-webkit-scrollbar-track {
+    background: transparent; 
+    
+  }
+   
+  /* Handle */
+  #container-content::-webkit-scrollbar-thumb {
+    background: rgb(255, 229, 79); 
+    border-radius: 10px;
+
+  }
+  
+  /* Handle on hover */
+  #container-content::-webkit-scrollbar-thumb:hover {
+    background: rgb(255, 208, 79); 
+    
+  }

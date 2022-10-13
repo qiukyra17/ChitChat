@@ -1,0 +1,59 @@
+.general {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    width: 450px;
+    height: 150px;
+    background-color: white;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: rgb(255, 131, 73);
+
+    overflow: hidden;
+}
+
+#title {
+    width: 430px;
+    height: 25px;
+    border-style: none;
+    margin: 0px 10px;
+}
+
+#title:focus{
+    outline: none;
+}
+
+#textbox{ 
+    width: 430px;
+    height: 90px;
+    border-style: none;
+}
+
+#textbox:focus{
+    outline: none;
+}
+
+#btn {
+    width: 450px;
+    height: 25px;
+    border-style: none;
+    background-color: rgb(255, 229, 79);
+    cursor: pointer;
+    font-family: Calibri, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#btn:hover{
+    background-image: linear-gradient(to right,rgb(255, 229, 79), rgb(255, 173, 79));
+    
+}

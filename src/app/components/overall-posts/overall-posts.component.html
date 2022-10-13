@@ -1,0 +1,13 @@
+<div class="general">
+    <h1>chit chat</h1>
+    <div id="container">
+        <div id="container-content">
+            <div *ngFor= "let post of posts">
+                <app-existing-posts [postTitle]= "post.postTitle" [postBody]= "post.postBody" 
+                >
+                </app-existing-posts>
+            </div>
+    </div>
+</div>
+
+<app-new-post (btnClicked)="postAdd()"></app-new-post>
