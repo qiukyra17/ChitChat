@@ -1,5 +1,7 @@
 import { PostsService } from 'src/app/services/posts.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { comment } from 'src/app/model/comment';
+import { CommentsService } from 'src/app/services/comments.service';
 
 @Component({
   selector: 'app-comments',
@@ -7,16 +9,21 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./comments.component.css']
 })
 export class CommentsComponent implements OnInit {
-  
-  @Input()
-  postId: number = 0;
-  @Input()
-  commentBody: string = " ";
 
-  constructor(private pservice: PostsService) { }
+  @Input()
+  comment : comment = {
+    commentId: 0,
+    commentBody: " ",
+    postId: 0
+  }
+
+  
+  @Output()
+  btnClicked : EventEmitter<any> = new EventEmitter<any>;
+  
+  constructor(private pservice: PostsService, private cservice: CommentsService) { }
 
   ngOnInit(): void {
-    this.pservice.getPostsById(this.postId).subscribe(reponse => console.log(reponse))
   }
 
 }

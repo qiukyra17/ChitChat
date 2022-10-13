@@ -13,7 +13,7 @@ import { Observable } from 'rxjs';
 })
 
 export class OverallPostsComponent implements OnInit {
-  
+
   postId: number = 0;
   posts: Array<post> = [];
   comments: Array<comment> = [];
@@ -22,11 +22,7 @@ export class OverallPostsComponent implements OnInit {
 
   ngOnInit(): void {
     //SHOWS ALL THE POSTS - WORKS
-    this.pservice.getPosts().subscribe(response =>
-      {this.posts = response; console.log(response)});
-
-    //SHOWS COMMENTS BY POST ID - DOESNT REALLY WORK
-    this.cservice.getCommentsByPostId(this.postId).subscribe(response => this.comments = response);
+    this.pservice.getPosts().subscribe(response => { this.posts = response; console.log(response) });
   }
 
   //REFRESHES COMPONENT - WORKS

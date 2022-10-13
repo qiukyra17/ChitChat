@@ -11,6 +11,8 @@ import { OverallPostsComponent } from './components/overall-posts/overall-posts.
 import { NewPostComponent } from './components/new-post/new-post.component';
 import { ExistingPostsComponent } from './components/existing-posts/existing-posts.component';
 import { CommentsComponent } from './components/comments/comments.component';
+import { NewCommentComponent } from './components/new-comment/new-comment.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { CommentsComponent } from './components/comments/comments.component';
     OverallPostsComponent,
     NewPostComponent,
     ExistingPostsComponent,
-    CommentsComponent
+    CommentsComponent,
+    NewCommentComponent,
   ],
   imports: [
     BrowserModule,

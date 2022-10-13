@@ -1,4 +1,16 @@
 <div class="general">
-    <h2>{{postTitle}}</h2>
-    <p>{{postBody}}</p>
+    <h2>{{post.postTitle}}</h2>
+    <p>{{post.postBody}}</p>
+    <button (click)="onClick()">comment</button>
+</div>
+
+<div class="comments" *ngIf="visible">
+    <div class="idk" *ngFor= "let comment of comments">
+        <app-comments [comment]= "comment" (btnClicked)="commentAdd()"></app-comments>
+    </div>
+    <div>
+        <app-new-comment [postId]= "post.postId" ></app-new-comment>
+    </div>
+    <!-- <input type="text" placeholder="comment" [(ngModel)] = "commentBody">
+    <button (click) = "addComment()" >Comment</button> -->
 </div>
